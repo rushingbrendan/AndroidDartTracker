@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DartScoreTracker</string>
+    <string name="title_board">Board</string>
+    <string name="title_shots">Shots</string>
+    <string name="title_win">Win</string>
+</resources>
