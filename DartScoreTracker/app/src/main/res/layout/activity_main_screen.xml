@@ -6,184 +6,269 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainScreen"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="0dp">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="384dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/navigation" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <SeekBar
-        android:id="@+id/seekBarMultiplier"
-        android:layout_width="350dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="58dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="350dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Point Value"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarMultiplier" />
 
-    <SeekBar
-        android:id="@+id/seekBarShotValue"
-        android:layout_width="354dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <SeekBar
+            android:id="@+id/seekBarShotValue"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textViewScorePreview"
-        android:layout_width="254dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonShot1"
-        app:layout_constraintEnd_toStartOf="@+id/addShotButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarShotValue"
-        app:layout_constraintVertical_bias="0.014" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="350dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Multiplier"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/seekBarMultiplier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="350dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Multiplier"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarMultiplier"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <SeekBar
+            android:id="@+id/seekBarMultiplier"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="58dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="350dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Point Value"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarMultiplier" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/addShotButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="ADD SHOT"
-        app:layout_constraintBottom_toTopOf="@+id/buttonShot3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textViewScorePreview"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarShotValue"
-        app:layout_constraintVertical_bias="0.014" />
+            <TextView
+                android:id="@+id/lblRoundTotal"
+                android:layout_width="191dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Shot Total: "
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/navigation"
+                app:layout_constraintEnd_toStartOf="@+id/lblRoundScorePreview"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/buttonShot1"
-        android:layout_width="104dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
-        app:layout_constraintEnd_toStartOf="@+id/buttonShot2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/textViewScorePreview"
+                android:layout_width="254dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="1 x 1 = 1"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/addShotButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarShotValue" />
 
-    <Button
-        android:id="@+id/buttonShot2"
-        android:layout_width="104dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
-        app:layout_constraintEnd_toStartOf="@+id/buttonShot3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonShot1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScorePreview"
-        app:layout_constraintVertical_bias="1.0" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonShot3"
-        android:layout_width="104dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonShot2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScorePreview"
-        app:layout_constraintVertical_bias="1.0" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/lblRoundTotal"
-        android:layout_width="191dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Round Total: "
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
-        app:layout_constraintEnd_toStartOf="@+id/lblRoundScorePreview"
-        app:layout_constraintStart_toStartOf="parent" />
+            <Button
+                android:id="@+id/addShotButton"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="ADD SHOT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewScorePreview"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarShotValue" />
 
-    <TextView
-        android:id="@+id/lblRoundScorePreview"
-        android:layout_width="173dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="0"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
+            <Button
+                android:id="@+id/btn50"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/button_bg_round"
+                android:text="50"
+                app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
+                app:layout_constraintEnd_toStartOf="@+id/btnShot3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewScorePreview"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn25"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/button_bg_round"
+                android:text="25"
+                app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
+                app:layout_constraintEnd_toStartOf="@+id/btnShot2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewScorePreview"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/button_bg_round"
+                android:text="MISS"
+                app:layout_constraintBottom_toTopOf="@+id/lblRoundScorePreview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addShotButton"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/btnShot1"
+                android:layout_width="104dp"
+                android:layout_height="62dp"
+                app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
+                app:layout_constraintEnd_toStartOf="@+id/btnShot2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewScorePreview"
+                app:layout_constraintVertical_bias="1.0" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnShot2"
+                android:layout_width="104dp"
+                android:layout_height="62dp"
+                app:layout_constraintBottom_toTopOf="@+id/lblRoundTotal"
+                app:layout_constraintEnd_toStartOf="@+id/btnShot3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewScorePreview"
+                app:layout_constraintVertical_bias="1.0" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/btnShot3"
+                android:layout_width="104dp"
+                android:layout_height="62dp"
+                app:layout_constraintBottom_toTopOf="@+id/lblRoundScorePreview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addShotButton"
+                app:layout_constraintVertical_bias="1.0" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmitRound"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:text="Submit Round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addShotButton"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblRoundInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:paddingRight="16dp"
+                android:text="Score:"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/lblRoundScorePreview"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="501"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
