@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="\n\nHow to use:\n\nTo start dart tracker:\nSelect a starting dart score of 501 or 601. \nPress start to start the dart score tracker. \n\n3 shots can be selected per round. \nThey can be selected using the point value on the scroll bar at the top. \nThe multiplier can be applied to the shot by sliding the scroll bar to 1, 2 or 3 times multiplier. \nThe shot can be added to the round by clicking the ‘Add Shot’ button. \nThe bullseye shot can be applied by clicking the 50 button and the outer bullseye can be applied by clicking the 25 button. \nA missed show can be applied by clicking the ‘miss’ button. \nIf an incorrect shot is selected, it can be removed from the round by clicking on the button with that shot total on it. \nOnce the three shots are listed correctly, they can be submitted to the score by clicking the ‘Submit Round’ button. \n\nThe current score total is shown in the middle of the screen. \nThe user can win the game by “doubling out”. The user must hit a shot with 2 times multiplier that equals their current score. The user can also win by hitting the 50 bullseye when they have a score of 50. \nIf the user has a chance of winning, their correct sequence of scoring will be display at the bottom of the app for the user at the beginning of the round. If it is impossible to win this round, then there will not be anything displayed.\n  "
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
