@@ -1,11 +1,14 @@
-package com.example.restaurantcalculator;
+package com.example.brushing0895.dartscoretracker;
 
 import java.io.Serializable;
-import androidx.room.*;
+import android.arch.persistence.room.*;
 
-@Entity
+@Entity (tableName = "Scores")
 public class Scores implements Serializable {
     @PrimaryKey(autoGenerate = true)
+    public int scoreID;
+
+    @ColumnInfo(name = "gameID")
     public int gameID;
 
     @ColumnInfo(name = "dart1")

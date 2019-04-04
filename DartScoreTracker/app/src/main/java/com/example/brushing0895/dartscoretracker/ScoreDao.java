@@ -1,8 +1,7 @@
-package com.example.restaurantcalculator;
+package com.example.brushing0895.dartscoretracker;
 
+import android.arch.persistence.room.*;
 import java.util.List;
-
-import androidx.room.*;
 
 @Dao
 public interface ScoreDao {
@@ -12,6 +11,6 @@ public interface ScoreDao {
     @Insert
     void addScore(Scores newScore);
 
-    @Query("SELECT TOP (1) gameID FROM Scores ORDER BY gameID")
+    @Query("SELECT gameID FROM Scores ORDER BY gameID ASC Limit 1")
     int getLastGameID();
 }

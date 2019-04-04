@@ -7,13 +7,14 @@
  *    Creates and runs the SQLite server used to save settings and reservations
  */
 
-package com.example.restaurantcalculator;
+package com.example.brushing0895.dartscoretracker;
 
+import android.arch.persistence.db.SupportSQLiteDatabase;
+import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
+import android.arch.persistence.room.*;
 
-import androidx.room.*;
-
-@Database(entities = {Scores.class}, version = 1, exportSchema = false)
+@Database(entities = {Scores.class}, version = 2, exportSchema = false)
 public abstract class ScoreDatabase extends RoomDatabase {
 
     private static ScoreDatabase dbInstance;
@@ -27,14 +28,30 @@ public abstract class ScoreDatabase extends RoomDatabase {
     //
     public static ScoreDatabase getScoreDatabase(Context context) {
         if (dbInstance == null) {
-            synchronized (AppDatabase.class) {
+            synchronized (ScoreDatabase.class) {
                 if (dbInstance == null) {
-                    dbInstance = Room.databaseBuilder(context.getApplicationContext(), ScoreDatabase.class, "score-database").allowMainThreadQueries().build();
+                    dbInstance = Room.databaseBuilder(context.getApplicationContext(), ScoreDatabase.class, "score-database").allowMainThreadQueries().addMigrations(MIGRATION_1_2).build();
                 }
             }
         }
         return dbInstance;
     }
+
+    static final Migration MIGRATION_1_2 = new Migration(1, 2)
+    {
+        @Override
+        public void migrate(SupportSQLiteDatabase database)
+        {
+            database.execSQL("DROP TABLE Scores;");
+            database.execSQL("CREATE TABLE Scores (" +
+                    "gameID INTEGER NOT NULL," +
+                    "scoreID INTEGER PRIMARY KEY NOT NULL," +
+                    "dart1 INTEGER NOT NULL," +
+                    "dart2 INTEGER NOT NULL," +
+                    "dart3 INTEGER NOT NULL," +
+                    "scoreAtStart INTEGER NOT NULL);");
+        }
+    };
 
 
     //Function : destroyInstance
