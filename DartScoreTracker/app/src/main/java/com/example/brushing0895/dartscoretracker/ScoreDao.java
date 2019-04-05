@@ -11,6 +11,9 @@ public interface ScoreDao {
     @Insert
     void addScore(Scores newScore);
 
-    @Query("SELECT gameID FROM Scores ORDER BY gameID ASC Limit 1")
+    @Query("SELECT gameID FROM Scores ORDER BY gameID DESC Limit 1")
     int getLastGameID();
+
+    @Query("SELECT gameID FROM Scores ORDER BY gameID ASC Limit 1")
+    int getFirstGameID();
 }

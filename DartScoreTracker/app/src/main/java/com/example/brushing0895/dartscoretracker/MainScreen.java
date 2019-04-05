@@ -49,6 +49,7 @@ public class MainScreen extends AppCompatActivity {
         scoreDao = scoreDatabase.dataAccess();
 
         gameID = scoreDao.getLastGameID()+1;
+        Log.d("gameID ->", Integer.toString(gameID));
 
         /*  Seek Bar for multiplier Settings   */
         /*  Multiplier: 1 , 2, 3          */
@@ -153,7 +154,6 @@ public class MainScreen extends AppCompatActivity {
                     sc.dart2Score = s2;
                     sc.dart3Score = s3;
                     sc.gameID = gameID;
-                    sc.scoreID = 0;
 
                     scoreDao.addScore(sc);
 

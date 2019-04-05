@@ -28,6 +28,7 @@ public class ScoreSelect extends AppCompatActivity {
         setContentView(R.layout.activity_score_select);
         final Button btnStartGame = ((Button)findViewById(R.id.btnStartGame));
         final Button btnAbout = ((Button)findViewById(R.id.btnAbout));
+        final Button btnScoreHistory = ((Button)findViewById(R.id.btnScoreHistory));
 
         btnStartGame.setOnClickListener(new Button.OnClickListener(){
             @Override
@@ -58,6 +59,16 @@ public class ScoreSelect extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), About.class);
                 startActivity(intent);
+            }
+        });
+
+        btnScoreHistory.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), ScoreHistory.class);
+                startActivity(intent);
+
             }
         });
 

@@ -70,6 +70,15 @@
                 android:layout_weight="1"
                 android:text="About" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnScoreHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score History"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="623dp" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

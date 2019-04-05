@@ -13,6 +13,7 @@ import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
 import android.arch.persistence.room.*;
+import android.util.Log;
 
 @Database(entities = {Scores.class}, version = 2, exportSchema = false)
 public abstract class ScoreDatabase extends RoomDatabase {
@@ -45,7 +46,7 @@ public abstract class ScoreDatabase extends RoomDatabase {
             database.execSQL("DROP TABLE Scores;");
             database.execSQL("CREATE TABLE Scores (" +
                     "gameID INTEGER NOT NULL," +
-                    "scoreID INTEGER PRIMARY KEY NOT NULL," +
+                    "scoreID INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "dart1 INTEGER NOT NULL," +
                     "dart2 INTEGER NOT NULL," +
                     "dart3 INTEGER NOT NULL," +

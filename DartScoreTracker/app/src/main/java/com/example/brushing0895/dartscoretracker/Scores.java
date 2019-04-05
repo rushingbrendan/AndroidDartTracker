@@ -22,4 +22,11 @@ public class Scores implements Serializable {
 
     @ColumnInfo(name = "scoreAtStart")
     public int scoreAtStart;
+
+    @Override
+    public String toString() {
+        return "GAME" + Integer.toString(gameID) +
+                " DARTS: " + Integer.toString(dart1Score) + " " +
+                Integer.toString(dart1Score) + " " + Integer.toString(dart1Score);
+    }
 }
